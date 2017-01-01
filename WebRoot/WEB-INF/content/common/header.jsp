@@ -5,7 +5,7 @@
     <div class="am-container">
         <h1 class="am-topbar-brand">
             <a href="${base}/" class="am-topbar-logo">
-                <img src="${base}/images/lovepanda.png" alt=LovePanda"">
+                <img src="${base}/images/snowcattle.png" alt=LovePanda"">
             </a>
         </h1>
         <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"

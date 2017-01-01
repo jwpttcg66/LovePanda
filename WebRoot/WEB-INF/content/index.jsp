@@ -8,8 +8,8 @@
 <%@ include file="/WEB-INF/content/common/taglib.jsp"%>
     <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="柳云飞的个人博客，主要是分享java和HTML相关的知识。本站采用java的JFinal框架和Amaze UI前端UI框架自主开发而成，网站会不定时更新新的模块和功能。当功能完善后会考虑开源。">
-  <meta name="keywords" content="lovepanda,柳云飞,柳云飞的博客,java博客,amazeui博客，lovepanda博客">
+  <meta name="description" content="snowcattle人博客，主要是分享java相关的知识。本站采用java的JFinal框架和Amaze UI前端UI框架自主开发而成，网站会不定时更新新的模块和功能。当功能完善后会考虑开源。">
+  <meta name="keywords" content="snowcattle,姜文平,姜文平的博客,java博客,amazeui博客，snowcattle博客">
   <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>${siteName}</title>
