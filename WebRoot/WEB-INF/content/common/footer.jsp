@@ -68,23 +68,23 @@
             <span>${siteName}</span>
             <dl>
                 <dt><img src="${base}/images/footer/64.png" alt=""></dt>
-                <dd>LovePanda博客欢迎你常来逛逛，本博客是博主采用java和Amaze UI等技术自主开发而成。本博客支持注册用户发表个人博客，拥有强大的后台管理功能。本博客在博主开发完成后会开源到GIT上。
-                    <a href="http://git.oschina.net/lovepanda603/lovepanda" target="_blank" class="footdon_pg ">
-                        <div class="foot_d_pg am-icon-git "> Git@OSC</div>
-                    </a><a href="https://github.com/lovepanda603/LovePanda" target="_blank" class="footdon_az animated">
-                        <div class="foot_d_az am-icon-github"> GitHub</div>
-                    </a></dd>
+                <%--<dd>snowcattle博客欢迎你常来逛逛，本博客是博主采用java和Amaze UI等技术自主开发而成。本博客支持注册用户发表个人博客，拥有强大的后台管理功能。本博客在博主开发完成后会开源到GIT上。--%>
+                    <%--<a href="http://git.oschina.net/lovepanda603/lovepanda" target="_blank" class="footdon_pg ">--%>
+                        <%--<div class="foot_d_pg am-icon-git "> Git@OSC</div>--%>
+                    <%--</a><a href="https://github.com/lovepanda603/LovePanda" target="_blank" class="footdon_az animated">--%>
+                        <%--<div class="foot_d_az am-icon-github"> GitHub</div>--%>
+                    <%--</a></dd>--%>
 
             </dl>
         </div>
 
         <div class="am_footer_erweima">
-            <div class="am_footer_weixin"><img src="${base}/images/footer/aliyun.jpg" alt="">
-                <div class="am_footer_d_gzwx am-icon-arrow-right"> 阿里云<br>9折优惠码<br>5LZGW2</div><br>
-            </div>
-            <div class="am_footer_ddon"><img src="${base}/images/footer/lovepandaerweima.png" alt="">
-                <div class="am_footer_d_dxz am-icon-cloud-download"> 手机扫码</div>
-            </div>
+            <%--<div class="am_footer_weixin"><img src="${base}/images/footer/aliyun.jpg" alt="">--%>
+                <%--<div class="am_footer_d_gzwx am-icon-arrow-right"> 阿里云<br>9折优惠码<br>5LZGW2</div><br>--%>
+            <%--</div>--%>
+            <%--<div class="am_footer_ddon"><img src="${base}/images/footer/lovepandaerweima.png" alt="">--%>
+                <%--<div class="am_footer_d_dxz am-icon-cloud-download"> 手机扫码</div>--%>
+            <%--</div>--%>
 
         </div>
 
