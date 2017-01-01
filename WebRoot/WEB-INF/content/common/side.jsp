@@ -164,10 +164,11 @@ $(document).ready(function(){
 		</c:forEach>
 	</div>
 </div>
-<a
-	href="http://s.click.taobao.com/t?e=m%3D2%26s%3D2lp8ZOlsbh8cQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAuEc3mx55Ht5jTj4KK5tHIPQV%2FVTErx%2FQQrV1twKDMTtA1iwpvkxBnvizI5WrLAhtxmIkXBqRClNTcEU%2BDykfuTlSg55GVX5wb6HrfO5Rkxh34mdTsZIUcAD%2Bi4rDfTRpeTIM5d0rdP%2B4UsysfR7j9ghhQs2DjqgEA%3D%3D"
-	target="_blank"> <img src="${base}/images/aliyun.gif"
-	style="margin-bottom: 15px;" /></a>
+<%--这里是广告-%>
+<%--<a--%>
+	<%--href="http://s.click.taobao.com/t?e=m%3D2%26s%3D2lp8ZOlsbh8cQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAuEc3mx55Ht5jTj4KK5tHIPQV%2FVTErx%2FQQrV1twKDMTtA1iwpvkxBnvizI5WrLAhtxmIkXBqRClNTcEU%2BDykfuTlSg55GVX5wb6HrfO5Rkxh34mdTsZIUcAD%2Bi4rDfTRpeTIM5d0rdP%2B4UsysfR7j9ghhQs2DjqgEA%3D%3D"--%>
+	<%--target="_blank"> <img src="${base}/images/aliyun.gif"--%>
+	<%--style="margin-bottom: 15px;" /></a>--%>
 <c:if test="${not empty gonggao}">
 	<div class="side-box">
 		<div class="my-side-title">
@@ -226,16 +227,17 @@ $(document).ready(function(){
 		</div>
 	</div>
 </c:if>
-  <c:if test="${not isPhone}">
-	<div data-am-sticky="{animation: 'slide-top'}">
-		<script type="text/javascript">
-			/*300*250 创建于 2015-10-31*/
-			var cpro_id = "u2378489";
-		</script>
-		<script src="http://cpro.baidustatic.com/cpro/ui/c.js"
-			type="text/javascript"></script>
-	</div>
-</c:if> 
+<%--这里是广告-%>
+  <%--<c:if test="${not isPhone}">--%>
+	<%--<div data-am-sticky="{animation: 'slide-top'}">--%>
+		<%--<script type="text/javascript">--%>
+			<%--/*300*250 创建于 2015-10-31*/--%>
+			<%--var cpro_id = "u2378489";--%>
+		<%--</script>--%>
+		<%--<script src="http://cpro.baidustatic.com/cpro/ui/c.js"--%>
+			<%--type="text/javascript"></script>--%>
+	<%--</div>--%>
+<%--</c:if> --%>
 <!-- 下面是手机部分 -->
 <!-- 是手机就取消浮动 -->
 <c:if test="${isPhone}">
