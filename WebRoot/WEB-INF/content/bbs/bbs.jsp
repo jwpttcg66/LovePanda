@@ -37,11 +37,12 @@
 					<div class="ds-thread" data-thread-key="bbs" data-title="LovePanda的留言板" data-url="${siteUrl}/bbs/index"></div>
 			<!-- 多说评论框 end -->
 	    </div>
-	    
+
+
 	    <div class="am-u-md-4" id="my-side">
-		    <center>
+		   <!-- <center>
 			    <embed src="http://music.163.com/style/swf/widget.swf?sid=32619064&type=2&auto=1&width=278&height=32" width="298" height="52"  allowNetworking="all"></embed>
-		    </center>
+		    </center>-->
 		    <%@ include file="/WEB-INF/content/common/side.jsp"%>
 	  	</div>
 	  	
