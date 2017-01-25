@@ -60,7 +60,7 @@
                 <li><a href="${base}/blog/">博客</a></li>
                 <li><a href="${base}/beauty/">美图</a></li>
                 <li><a href="${base}/video/">视频</a></li>
-                <li><a href="http://bbs.liuyunfei.cn">BBS</a></li>
+                <li><a href="${base}/bbs/">BBS</a></li>
             </ul>
         </div>
 
