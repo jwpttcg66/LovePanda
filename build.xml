@@ -14,7 +14,6 @@
   <property name="ueditorlib.dir" location="WebRoot/ueditor/jsp/lib"/>
   <property name="webroot.dir" location="WebRoot"/>
   <property name="tomcat.lib" location="/Users/jwp/macpro_soft/soft/apache-tomcat-7.0.67"/>
-
   <!-- =================================================================== -->
   <!-- Initialization target                                               -->
   <!-- =================================================================== -->
@@ -42,6 +41,7 @@
     <javac srcdir="${src.dir}" destdir="${build.dir}" debug="true" includeantruntime="on">
       <compilerarg line="-encoding UTF-8"/>
       <classpath refid="classpath"/>
+      <compilerarg value="-XDignore.symbol.file"/>
     </javac>
   </target>
 
