@@ -1,35 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project>
+<project name="snowcattle" default="dist" basedir=".">
+  <property name="version" value="1.00.100"></property>
+  <property name="root.dir" value="."/>
+  <property name="zip.filename" value="snowcattle"/>
+  <property name="tar.filename" value="snowcattle_v${version}.tar"/>
+  <property name="gzip.filename" value="${tar.filename}.gz"></property>
+  <property name="src.dir" location="src"/>
+  <property name="resource.dir" location="resource"/>
+  <property name="build.dir" location="build_tmp"/>
+  <property name="dist.dir" location="dist_tmp"/>
+  <property name="lib.dir" location="WebRoot\WEB-INF\lib"/>
+  <property name="webroot.dir" location="WebRoot"/>
+  <property name="tomcat.lib" location="/Users/jwp/macpro_soft/soft/apache-tomcat-7.0.67"/>
 
-<project name="LovePanda" default="init" basedir=".">
+  <!-- =================================================================== -->
+  <!-- Initialization target                                               -->
+  <!-- =================================================================== -->
+  <target name="init" depends="clean">
+    <mkdir dir="${build.dir}" />
+    <mkdir dir="${dist.dir}" />
+    <path id="classpath">
+      <pathelement path="${classpath}"/>
+      <fileset dir="${lib.dir}">
+        <include name="**/*.jar"/>
+      </fileset>
+      <fileset dir="${tomcat.lib}">
+        <include name="**/*.jar"/>
+      </fileset>
+    </path>
+  </target>
 
-
-  <property name="src" location="src"/>
-  <property name="classes" location="WebRoot\WEB-INF\classes"/>
-  <property name="RESIN_HOME" location="G:\apache-tomcat-7.0.55"/>
-
-  <target name="init">
-    <tstamp/>
-	<!--
-    <delete dir="${classes}"/>
-    <mkdir dir="${classes}"/>
-    <javac  destdir="${classes}" encoding="UTF-8" debug="true" includeantruntime="false">
-    	<src path="crmsrc"/>
-    	<src path="oaSpring"/>
-    	<src path="src"/>
-      <classpath>
-        <fileset dir="${RESIN_HOME}">
-          <include name="lib\*.jar"/>
-        </fileset>
-        <fileset dir="WebRoot\WEB-INF\lib">
-          <include name="*.jar"/>
-        </fileset>
-      </classpath>
+  <!-- =================================================================== -->
+  <!-- Compiles the source directory                                       -->
+  <!-- =================================================================== -->
+  <target name="compile" depends="init">
+    <javac srcdir="${src.dir}" destdir="${build.dir}" debug="true" includeantruntime="on">
+      <compilerarg line="-encoding UTF-8"/>
+      <classpath refid="classpath"/>
     </javac>
-	-->
-    <copy todir="${classes}">
-      <fileset dir="${src}">
-        <exclude name="**/*.java"/>
+  </target>
+
+  <target name="dist" depends="compile">
+    <copy todir="${dist.dir}">
+      <fileset dir="${webroot.dir}">
       </fileset>
     </copy>
+    <delete dir="${build.dir}"/>
+    <antcall target="tar"></antcall>
+    <antcall target="clean"></antcall>
+  </target>
+
+  <target name="zip">
+    <delete file="${root.dir}/${zip.filename}.zip"></delete>
+    <zip destfile="${root.dir}/${zip.filename}.zip">
+      <fileset dir="${dist.dir}">
+        <exclude name="WEB-INF/lib/**"/>
+      </fileset>
+    </zip>
+  </target>
+
+  <target name="tar">
+    <delete file="${root.dir}/${gzip.filename}"></delete>
+    <tar destfile="${root.dir}/${tar.filename}">
+      <fileset dir="${dist.dir}">
+      </fileset>
+    </tar>
+    <gzip src="${root.dir}/${tar.filename}" destfile="${root.dir}/${gzip.filename}"/>
+    <delete file="${root.dir}/${tar.filename}"></delete>
+    <tstamp>
+      <format property="now" pattern="yyyy-MM-dd HH:mm:ss" locale="us"/>
+    </tstamp>
+    <echo>${now}</echo>
+  </target>
+
+  <target name="clean">
+    <delete dir="${build.dir}"/>
+    <delete dir="${dist.dir}"/>
   </target>
 </project>
