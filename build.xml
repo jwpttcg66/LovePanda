@@ -14,6 +14,11 @@
   <property name="ueditorlib.dir" location="WebRoot/ueditor/jsp/lib"/>
   <property name="webroot.dir" location="WebRoot"/>
   <property name="tomcat.lib" location="/Users/jwp/macpro_soft/soft/apache-tomcat-7.0.67"/>
+  <property environment="env"/>
+  <path id="JAVA.rt">
+    <pathelement location="${env.JAVA_HOME}/jre/lib/rt.jar" />
+  </path>
+
   <!-- =================================================================== -->
   <!-- Initialization target                                               -->
   <!-- =================================================================== -->
@@ -21,7 +26,7 @@
     <mkdir dir="${build.dir}" />
     <mkdir dir="${dist.dir}" />
     <path id="classpath">
-      <pathelement path="${classpath}"/>
+      <pathelement path="${env.CLASSPATH}"/>
       <fileset dir="${lib.dir}">
         <include name="**/*.jar"/>
       </fileset>
@@ -31,6 +36,7 @@
       <fileset dir="${ueditorlib.dir}">
         <include name="**/*.jar"/>
       </fileset>
+
     </path>
   </target>
 
@@ -41,7 +47,7 @@
     <javac srcdir="${src.dir}" destdir="${build.dir}" debug="true" includeantruntime="on">
       <compilerarg line="-encoding UTF-8"/>
       <classpath refid="classpath"/>
-      <compilerarg value="-XDignore.symbol.file"/>
+      <!--<compilerarg value="-XDignore.symbol.file"/>-->
     </javac>
   </target>
 
