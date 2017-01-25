@@ -10,7 +10,7 @@ import com.fly.controller.admins.AdminsController;
 import com.fly.controller.beauty.BeautyController;
 import com.fly.controller.blog.BlogController;
 import com.fly.controller.index.IndexController;
-import com.fly.controller.liuyanban.LiuyanbanController;
+import com.fly.controller.bbs.BBSController;
 import com.fly.controller.user.UserController;
 import com.fly.controller.video.VideoController;
 import com.fly.entity.Advice;
@@ -84,7 +84,7 @@ public class MyConfig extends JFinalConfig
         me.add("/blog", BlogController.class, "/blog"); // 第三个参数省略时默认与第一个参数值相同，在此即为
         me.add("/admins", AdminsController.class, "/admins");// 按照bootstrap模板开发而成
         me.add("/user", UserController.class, "/user");// 用户
-        me.add("/liuyanban", LiuyanbanController.class, "/liuyanban");
+        me.add("/bbs", BBSController.class, "/bbs");
         me.add("/beauty", BeautyController.class, "/beauty");// 美图
         me.add("/video", VideoController.class, "/video");// 视频
         logger.info("配置路由结束..");

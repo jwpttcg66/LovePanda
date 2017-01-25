@@ -58,8 +58,8 @@
                     </a>
                 </li>
                
-                <li id="header-liuyanban">
-                    <a href="${base}/liuyanban/" >
+                <li id="header-bbs">
+                    <a href="${base}/bbs/" >
                         	留言板
                     </a>
                 </li>
@@ -115,7 +115,7 @@
     	var paurl=window.location.pathname;
     	var blogflag=paurl.indexOf("blog");
     	var userflag=paurl.indexOf("user");
-    	var liuyanbanflag=paurl.indexOf("liuyanban");
+    	var bbsFlag=paurl.indexOf("bbs");
     	var beautyflag=paurl.indexOf("beauty");
     	var videoflag=paurl.indexOf("video");
     	if(blogflag!=-1){
@@ -123,8 +123,8 @@
     		$("#header-blog-first").attr("style","color:white");
     	}else if(userflag!=-1){
     		$("#header-user").addClass("am-active");
-    	}else if(liuyanbanflag!=-1){
-    		$("#header-liuyanban").addClass("am-active");
+    	}else if(bbsFlag!=-1){
+    		$("#header-bbs").addClass("am-active");
     	}else if(beautyflag!=-1){
     		$("#header-beauty").addClass("am-active");
     	}else if(videoflag!=-1){
