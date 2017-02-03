@@ -94,6 +94,7 @@
              <c:if test="${empty sessionScope.loginUser}">
 	           <div class="am-topbar-right">
 	              	<button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm" data-am-modal="{target: '#login-modal'}">登录</button>
+	              	<button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm" data-am-modal="{target: '#register-modal'}">注册</button>
 	              	<a href="${base}/qqlogin" style="display:inline-block"><img alt="QQ互联登陆" src="${base}/images/index/Connect_logo_7.png" style="padding-top: 8px;"></a>
 	          </div>
 	       </c:if>

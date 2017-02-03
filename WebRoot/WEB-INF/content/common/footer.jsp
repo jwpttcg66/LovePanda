@@ -109,7 +109,7 @@
 	 <div class="am-popup"  id="login-modal">
 	  <div class="am-popup-inner">
 		<div class="am-popup-hd">
-		  <h4 class="am-popup-title">LovePanda登陆</h4>
+		  <h4 class="am-popup-title">snowcattle登陆</h4>
 		  <span data-am-modal-close
 				class="am-close">&times;</span>
 		</div>
@@ -117,9 +117,6 @@
 			<div class="am-tabs" id="login-tabs">
 			  <ul class="am-tabs-nav am-nav am-nav-tabs">
 			    <li class="am-active"><a href="">登陆</a></li>
-			    <c:if test="${systemRegisterOpen==1}">
-			    <li><a href="">注册</a></li>
-			    </c:if>
 			  </ul>
 				<div class="am-tabs-bd">
 				   <div  class="am-tab-panel am-fade am-active  am-in ">
@@ -136,33 +133,6 @@
 							<button type="submit" class="am-btn am-btn-secondary ">提交</button>
 						</form>
 					 </div>
-					<c:if test="${systemRegisterOpen==1}">
-					<div class="am-tab-panel am-fade">
-						<form id="registerform" data-am-validator action="${base}/register" class="am-form" method="post" enctype="multipart/form-data">
-							<div class="am-form-group">
-							  <label for="login-username">用户名</label>
-							  <input type="text" class="" name="user.username" id="login-username" pattern="^[a-zA-Z]\w{2,14}$" placeholder="请输入用户名（3~15位数字字母下划线）" required>
-							</div>
-							<div class="am-form-group">
-							  <label for="login-realname">昵称</label>
-							  <input type="text" class="" name="user.realname" id="login-realname" maxlength="6" placeholder="请输入呢称（&lt;=6位任意字符）" required>
-							</div>
-							<div class="am-form-group">
-							  <label for="login-mail">邮件</label>
-							  <input type="email" class="" name="user.mail" id="login-mail"  placeholder="请输入电子邮件" required>
-							</div>
-							<div class="am-form-group">
-							  <label for="login-password">密码</label>
-							  <input type="password" class="" name="user.password" id="login-password" placeholder="请输入密码" required>
-							</div>
-							<div class="am-form-group">
-							  <label for="login-password">重复密码</label>
-							  <input type="password" class="" name="password_ag" id="login-password" placeholder="请再次输入密码" required>
-							</div>
-							<button type="submit" class="am-btn am-btn-secondary ">提交</button>
-						</form>
-					</div>
-					</c:if>
 				</div>
 			</div>
 		</div>
@@ -174,3 +144,59 @@
 	  });
 	</script>
  </c:if>
+
+<!-- 登陆和注册 -->
+<c:if test="${empty sessionScope.loginUser}">
+	<div class="am-popup"  id="register-modal">
+		<div class="am-popup-inner">
+			<div class="am-popup-hd">
+				<h4 class="am-popup-title">snowcattle注册</h4>
+		  <span data-am-modal-close
+				class="am-close">&times;</span>
+			</div>
+			<div class="am-popup-bd">
+				<div class="am-tabs" id="register-tabs">
+					<ul class="am-tabs-nav am-nav am-nav-tabs">
+						<c:if test="${systemRegisterOpen==1}">
+							<li><a href="">注册</a></li>
+						</c:if>
+					</ul>
+					<div class="am-tabs-bd">
+						<c:if test="${systemRegisterOpen==1}">
+							<div class="am-tab-panel am-fade">
+								<form id="registerform" data-am-validator action="${base}/register" class="am-form" method="post" enctype="multipart/form-data">
+									<div class="am-form-group">
+										<label for="register-username">用户名</label>
+										<input type="text" class="" name="user.username" id="register-username" pattern="^[a-zA-Z]\w{2,14}$" placeholder="请输入用户名（3~15位数字字母下划线）" required>
+									</div>
+									<div class="am-form-group">
+										<label for="register-realname">昵称</label>
+										<input type="text" class="" name="user.realname" id="register-realname" maxlength="6" placeholder="请输入呢称（&lt;=6位任意字符）" required>
+									</div>
+									<div class="am-form-group">
+										<label for="register-mail">邮件</label>
+										<input type="email" class="" name="user.mail" id="register-mail"  placeholder="请输入电子邮件" required>
+									</div>
+									<div class="am-form-group">
+										<label for="register-password">密码</label>
+										<input type="password" class="" name="user.password" id="register-password" placeholder="请输入密码" required>
+									</div>
+									<div class="am-form-group">
+										<label for="register-password-repeat">重复密码</label>
+										<input type="password" class="" name="password_ag" id="register-password-repeat" placeholder="请再次输入密码" required>
+									</div>
+									<button type="submit" class="am-btn am-btn-secondary ">提交</button>
+								</form>
+							</div>
+						</c:if>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(function() {
+			$('#register-tabs').tabs();
+		});
+	</script>
+</c:if>
