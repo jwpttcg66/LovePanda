@@ -72,7 +72,7 @@
 					</div>
 				</c:if>
 				<hr data-am-widget="divider" style="" class="am-divider am-divider-dashed"/>
-				<div class="shengming">声明：若要转载LovePanda中的任何美图请注明转载地址</div>
+				<div class="shengming">声明：若要转载snowcattle中的任何美图请注明转载地址</div>
 				<script type="text/javascript">
 				    /*博客详情广告*/
 				    var cpro_id = "u2355178";

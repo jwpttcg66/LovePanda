@@ -24,7 +24,7 @@
 		  <div class="shengming">原文地址：<a href="${blog.zhuanzaiurl}"  target="blank">${blog.zhuanzaiurl}</a></div>
 	 </c:if>
 	 <c:if test="${blog.zhuanzai!=1}">
-		<div class="shengming">声明：若要转载LovePanda中的任何博客请注明转载地址</div>
+		<div class="shengming">声明：若要转载snowcattle中的任何博客请注明转载地址</div>
 	 </c:if>
 	  <c:if test="${not isPhone}">
 	  	<div style="width: 100%;overflow: hidden;">
