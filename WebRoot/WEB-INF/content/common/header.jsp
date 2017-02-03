@@ -63,6 +63,8 @@
                         	留言板
                     </a>
                 </li>
+
+                <!--
                 <li class="am-dropdown am-right" data-am-dropdown="">
                     <a class="am-dropdown-toggle" data-am-dropdown-toggle="" href="javascript:;">
                       	系统
@@ -82,6 +84,7 @@
                         </li>
                     </ul>
                 </li>
+                -->
             </ul>
 		     <c:if test="${not empty sessionScope.loginUser}">
 		     	<div class="am-topbar-right" >
