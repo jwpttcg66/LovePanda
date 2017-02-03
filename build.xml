@@ -10,9 +10,14 @@
   <property name="resource.dir" location="resource"/>
   <property name="build.dir" location="build_tmp"/>
   <property name="dist.dir" location="dist_tmp"/>
-  <property name="lib.dir" location="WebRoot\WEB-INF\lib"/>
+  <property name="lib.dir" location="WebRoot/WEB-INF/lib"/>
+  <property name="ueditorlib.dir" location="WebRoot/ueditor/jsp/lib"/>
   <property name="webroot.dir" location="WebRoot"/>
-  <property name="tomcat.lib" location="/Users/jiangwenping/soft/apache-tomcat-8.5.0"/>
+  <property name="tomcat.lib" location="/Users/jwp/macpro_soft/soft/apache-tomcat-7.0.67"/>
+  <property environment="env"/>
+  <path id="JAVA.rt">
+    <pathelement location="${env.JAVA_HOME}/jre/lib/rt.jar" />
+  </path>
 
   <!-- =================================================================== -->
   <!-- Initialization target                                               -->
@@ -21,13 +26,17 @@
     <mkdir dir="${build.dir}" />
     <mkdir dir="${dist.dir}" />
     <path id="classpath">
-      <pathelement path="${classpath}"/>
+      <pathelement path="${env.CLASSPATH}"/>
       <fileset dir="${lib.dir}">
         <include name="**/*.jar"/>
       </fileset>
       <fileset dir="${tomcat.lib}">
         <include name="**/*.jar"/>
       </fileset>
+      <fileset dir="${ueditorlib.dir}">
+        <include name="**/*.jar"/>
+      </fileset>
+
     </path>
   </target>
 
@@ -38,6 +47,7 @@
     <javac srcdir="${src.dir}" destdir="${build.dir}" debug="true" includeantruntime="on">
       <compilerarg line="-encoding UTF-8"/>
       <classpath refid="classpath"/>
+      <!--<compilerarg value="-XDignore.symbol.file"/>-->
     </javac>
   </target>
 
@@ -55,7 +65,7 @@
     <delete file="${root.dir}/${zip.filename}.zip"></delete>
     <zip destfile="${root.dir}/${zip.filename}.zip">
       <fileset dir="${dist.dir}">
-       <!-- <exclude name="WEB-INF/lib/**"/>-->
+        <exclude name="WEB-INF/lib/**"/>
       </fileset>
     </zip>
   </target>
@@ -64,20 +74,7 @@
     <delete file="${root.dir}/${gzip.filename}"></delete>
     <tar destfile="${root.dir}/${tar.filename}">
       <fileset dir="${dist.dir}">
-        <!--<exclude name="WEB-INF/lib/**"/>
-        <exclude name="WEB-INF/classes/*.properties"/>
-        <exclude name="WEB-INF/classes/bean/*redis*.xml"/>
-        <exclude name="WEB-INF/classes/log/*.xml"/>
-        <exclude name="WEB-INF/classes/bean/*datasource*.xml"/>-->
       </fileset>
-
-     <!-- <fileset dir="${dist.dir}">
-        <filename name="WEB-INF/lib/wxsdk.jar"/>
-      </fileset>
-
-      <fileset dir="${dist.dir}">
-        <filename name="WEB-INF/lib/ZeroUtil-0.0.1.jar"/>
-      </fileset>-->
     </tar>
     <gzip src="${root.dir}/${tar.filename}" destfile="${root.dir}/${gzip.filename}"/>
     <delete file="${root.dir}/${tar.filename}"></delete>

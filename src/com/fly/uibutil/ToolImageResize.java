@@ -23,9 +23,9 @@ import javax.swing.ImageIcon;
 
 import org.apache.log4j.Logger;
 
-import com.sun.image.codec.jpeg.JPEGCodec;
-import com.sun.image.codec.jpeg.JPEGEncodeParam;
-import com.sun.image.codec.jpeg.JPEGImageEncoder;
+//import com.sun.image.codec.jpeg.JPEGCodec;
+//import com.sun.image.codec.jpeg.JPEGEncodeParam;
+//import com.sun.image.codec.jpeg.JPEGImageEncoder;
 
 /**
  * 图像压缩工具
@@ -244,13 +244,18 @@ public class ToolImageResize
             ConvolveOp cOp = new ConvolveOp(kernel, ConvolveOp.EDGE_NO_OP, null);
             bufferedImage = cOp.filter(bufferedImage, null);
             // Write the jpeg to a file.
-            out = new FileOutputStream(resizedFile);
+//            out = new FileOutputStream(resizedFile);
             // Encodes image as a JPEG data stream
-            JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(out);
-            JPEGEncodeParam param = encoder.getDefaultJPEGEncodeParam(bufferedImage);
-            param.setQuality(quality, true);
-            encoder.setJPEGEncodeParam(param);
-            encoder.encode(bufferedImage);
+//            JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(out);
+//            JPEGEncodeParam param = encoder.getDefaultJPEGEncodeParam(bufferedImage);
+//            param.setQuality(quality, true);
+//            encoder.setJPEGEncodeParam(param);
+//            encoder.encode(bufferedImage);
+
+            String formatName = resizedFile.getName().substring(resizedFile.getName().lastIndexOf(".") + 1);
+            ImageIO.write(bufferedImage, "jpeg",resizedFile);
+            bufferedImage.flush();
+
         }
         catch (IOException e)
         {

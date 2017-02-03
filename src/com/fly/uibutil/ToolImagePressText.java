@@ -13,8 +13,8 @@ import javax.imageio.ImageIO;
 
 import org.apache.log4j.Logger;
 
-import com.sun.image.codec.jpeg.JPEGCodec;
-import com.sun.image.codec.jpeg.JPEGImageEncoder;
+//import com.sun.image.codec.jpeg.JPEGCodec;
+//import com.sun.image.codec.jpeg.JPEGImageEncoder;
 
 /**
  * 图片水印处理
@@ -57,10 +57,13 @@ public class ToolImagePressText
             g.drawImage(src_biao, wideth - wideth_biao - x, height
                     - height_biao - y, wideth_biao, height_biao, null);
             g.dispose();
-            FileOutputStream out = new FileOutputStream(targetImg);
-            JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(out);
-            encoder.encode(image);
-            out.close();
+//            FileOutputStream out = new FileOutputStream(targetImg);
+//            JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(out);
+//            encoder.encode(image);
+//            out.close();
+            String formatName = targetImg.substring(targetImg.lastIndexOf(".") + 1);
+            ImageIO.write(image, formatName,new File(targetImg));
+            image.flush();
         }
         catch (Exception e)
         {
@@ -99,10 +102,14 @@ public class ToolImagePressText
             g.drawString(pressText, wideth - fontSize - x, height - fontSize
                     / 2 - y);
             g.dispose();
-            FileOutputStream out = new FileOutputStream(targetImg);
-            JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(out);
-            encoder.encode(image);
-            out.close();
+//            FileOutputStream out = new FileOutputStream(targetImg);
+//            JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(out);
+//            encoder.encode(image);
+//            out.close();
+
+            String formatName = targetImg.substring(targetImg.lastIndexOf(".") + 1);
+            ImageIO.write(image, formatName,new File(targetImg));
+            image.flush();
         }
         catch (Exception e)
         {
