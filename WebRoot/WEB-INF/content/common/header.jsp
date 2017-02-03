@@ -64,6 +64,27 @@
                     </a>
                 </li>
 
+                <c:if test="${administrator}">
+                    <li class="am-dropdown am-right" data-am-dropdown="">
+                        <a class="am-dropdown-toggle" data-am-dropdown-toggle="" href="javascript:;">
+                            系统
+                        <span class="am-icon-caret-down">
+                        </span>
+                        </a>
+                        <ul class="am-dropdown-content">
+                            <li>
+                                <a href="javascript:void(0)" onclick="logout();">
+                                    注销
+                                </a>
+                            </li>
+                            <li>
+                                <a href="${base}/admins/">
+                                    后台
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </c:if>
                 <!--
                 <li class="am-dropdown am-right" data-am-dropdown="">
                     <a class="am-dropdown-toggle" data-am-dropdown-toggle="" href="javascript:;">
@@ -85,6 +106,7 @@
                     </ul>
                 </li>
                 -->
+
             </ul>
 		     <c:if test="${not empty sessionScope.loginUser}">
 		     	<div class="am-topbar-right" >

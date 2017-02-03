@@ -1,30 +1,9 @@
 
 package com.fly.controller.index;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import javax.servlet.http.HttpServletRequest;
-
 import com.fly.common.Constants;
 import com.fly.controller.BaseController;
-import com.fly.entity.Advice;
-import com.fly.entity.Beauty;
-import com.fly.entity.Blog;
-import com.fly.entity.Blogcategory;
-import com.fly.entity.Picrecommend;
-import com.fly.entity.Qquser;
-import com.fly.entity.Role;
-import com.fly.entity.User;
-import com.fly.entity.Userlogininfo;
-import com.fly.entity.Userrole;
-import com.fly.entity.Video;
+import com.fly.entity.*;
 import com.fly.util.HtmlUtil;
 import com.fly.util.Utility;
 import com.google.gson.Gson;
@@ -40,6 +19,11 @@ import com.qq.connect.api.qzone.UserInfo;
 import com.qq.connect.javabeans.AccessToken;
 import com.qq.connect.javabeans.qzone.UserInfoBean;
 import com.qq.connect.oauth.Oauth;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * IndexController
@@ -130,6 +114,21 @@ public class IndexController extends BaseController
             CacheKit.put("index", "videoList", videoList);
         }
         setAttr("videoList", videoList);
+
+        User user = Constants.getLoginUser(getSession());
+        setAttr("administrator", false);
+        if(user != null){
+            Userrole ur = Userrole.me.findByUserId(user.getInt("id"));
+            if (!Utility.empty(ur)){
+                Role r = Role.me.findById(ur.getInt("role_id"));
+                if (!Utility.empty(r)
+                        && "administrator".equals(r.getStr("role_name")))
+                {
+                    setAttr("administrator", true);
+                }
+            }
+
+        }
         render("index.jsp");
     }
 
