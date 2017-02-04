@@ -34,7 +34,7 @@
 			  <li><a href="${base}/bbs/index">留言板</a></li>
 			</ol>
 			<!-- 多说评论框 start -->
-					<div class="ds-thread" data-thread-key="bbs" data-title="LovePanda的留言板" data-url="${siteUrl}/bbs/index"></div>
+					<div class="ds-thread" data-thread-key="bbs" data-title="snowcattle的留言板" data-url="${siteUrl}/bbs/index"></div>
 			<!-- 多说评论框 end -->
 	    </div>
 
