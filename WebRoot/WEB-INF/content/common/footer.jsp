@@ -44,7 +44,7 @@
 		<div class="side-tool">
 			<ul style="list-style-type: none;">
 				<li><a href="${base}/index/advice"><div class="sidebox"><img src="${base}/images/side/liuyan.png">意见和留言</div></a></li>
-				<li><a href="tencent://message/?uin=1365537920&Site=在线QQ&amp;Menu=yes" ><div class="sidebox"><img src="${base}/images/side/side_icon04.png">QQ联系</div></a></li>
+				<li><a href="tencent://message/?uin=330258845&Site=在线QQ&amp;Menu=yes" ><div class="sidebox"><img src="${base}/images/side/side_icon04.png">QQ联系</div></a></li>
 				<li style="border:none;"><a href="javascript:goTop();" class="sidetop"><img src="${base}/images/side/side_icon05.png"></a></li>
 				<li style="border:none;"><a href="javascript:goBottom();" class="sidetop"><img src="${base}/images/side/side_icon06bottom.png"></a></li>
 			</ul>
