@@ -1,3 +1,4 @@
 config.properties
 classes
 *.tar.gz
+qqconnectconfig.properties
