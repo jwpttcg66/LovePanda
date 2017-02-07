@@ -434,9 +434,9 @@ public class IndexController extends BaseController
             renderJsp("/WEB-INF/content/common/result.jsp");
             return;
         }
-        if (user.getStr("realname").length() > 6)
+        if (user.getStr("realname").length() > 10)
         {
-            String message = "昵称长度不能大于6位";
+            String message = "昵称长度不能大于10位";
             setAttr("message", message);
             renderJsp("/WEB-INF/content/common/result.jsp");
             return;

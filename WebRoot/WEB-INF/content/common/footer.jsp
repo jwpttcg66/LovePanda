@@ -173,7 +173,7 @@
 									</div>
 									<div class="am-form-group">
 										<label for="register-realname">昵称</label>
-										<input type="text" class="" name="user.realname" id="register-realname" maxlength="6" placeholder="请输入呢称（&lt;=6位任意字符）" required>
+										<input type="text" class="" name="user.realname" id="register-realname" maxlength="10" placeholder="请输入呢称（&lt;=10位任意字符）" required>
 									</div>
 									<div class="am-form-group">
 										<label for="register-mail">邮件</label>
