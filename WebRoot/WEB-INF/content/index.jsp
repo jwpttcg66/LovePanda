@@ -16,7 +16,6 @@
     <title>${siteName}</title>
     <meta name="renderer" content="webkit">
     <meta name="baidu-site-verification" content="wzScAxEJxQ"/>
-    <meta name="baidu_union_verify" content="2187d85d9f5923cd9042528730e83bf8">
     <link rel="icon" href="${base}/favicon.ico" type="image/x-icon"/>
     <script src="${base}/js/jquery.scrollbox.js"></script>
     <style type="text/css">
