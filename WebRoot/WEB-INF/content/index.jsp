@@ -154,7 +154,7 @@
                 <div class="wygg">
                     <dd>更多精彩<s></s></dd>
                     <ul>
-                        <li><a href="${base}/blog/">阅读更多博客请进入博客频道，点我进入 !</a></li>
+                        <li><a href="${base}/blog?ranktype=latest">阅读更多博客请进入博客频道，点我进入 !</a></li>
                     </ul>
                 </div>
             </c:if>
