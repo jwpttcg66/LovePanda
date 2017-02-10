@@ -12,7 +12,7 @@
     <meta name="keywords" content="人民币 大小写转换">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>美图</title>
+    <title>工具</title>
     <meta property="qc:admins" content="17257406576415156651636"/>
     <!-- Set render engine for 360 browser -->
     <meta name="renderer" content="webkit">
