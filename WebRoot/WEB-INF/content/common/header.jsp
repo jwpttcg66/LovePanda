@@ -57,7 +57,23 @@
                        	 视频
                     </a>
                 </li>
-               
+
+                <li class="am-dropdown" data-am-dropdown="" id="header-tools">
+                    <a class="am-dropdown-toggle" id="header-tootls-first"  data-am-dropdown-toggle=""  href="javascript:;">
+                        工具
+                        <span class="am-icon-caret-down">
+                        </span>
+                    </a>
+                    <ul class="am-dropdown-content">
+                        <li>
+                            <a href="${base}/tools/rmbconversion">
+                                人民币大小写转换
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
                 <li id="header-bbs">
                     <a href="${base}/bbs/" >
                         	留言板

@@ -3,6 +3,7 @@ package com.fly.config;
 
 import java.util.List;
 
+import com.fly.controller.tools.ToolsController;
 import org.apache.log4j.Logger;
 
 import com.alibaba.druid.wall.WallFilter;
@@ -87,6 +88,7 @@ public class MyConfig extends JFinalConfig
         me.add("/bbs", BBSController.class, "/bbs");
         me.add("/beauty", BeautyController.class, "/beauty");// 美图
         me.add("/video", VideoController.class, "/video");// 视频
+        me.add("/tools", ToolsController.class, "/tools");// 工具
         logger.info("配置路由结束..");
     }
 
