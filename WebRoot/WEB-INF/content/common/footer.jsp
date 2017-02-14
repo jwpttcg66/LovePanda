@@ -90,10 +90,10 @@
     </div>
     <div class="am_info_line">Copyright(c)2016 <span>${siteName }</span> All Rights Reserved </div>
     <div class="am_info_line-beian">京ICP备17005126号>
-	<c:if test="${administrator}">
-		<script language="javascript" type="text/javascript" src="http://js.users.51.la/19099759.js"></script>
-		<noscript><a href="http://www.51.la/?19099759" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/19099759.asp" style="border:none" /></a></noscript>
-	</c:if>
+	<%--<c:if test="${administrator}">--%>
+		<%--<script language="javascript" type="text/javascript" src="http://js.users.51.la/19099759.js"></script>--%>
+		<%--<noscript><a href="http://www.51.la/?19099759" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/19099759.asp" style="border:none" /></a></noscript>--%>
+	<%--</c:if>--%>
 	</div>
     <c:if test="${isPhone}">
 		<div data-am-widget="gotop" class="am-gotop am-gotop-fixed">
@@ -215,6 +215,18 @@
 			var s = document.getElementsByTagName("script")[0];
 			s.parentNode.insertBefore(bp, s);
 		})();
+	</script>
+
+	<%--Google Analytics--%>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-91931716-1', 'auto');
+		ga('send', 'pageview');
+
 	</script>
 
 </c:if>
