@@ -28,11 +28,11 @@
 	 </c:if>
 	  <c:if test="${not isPhone}">
 	  	<div style="width: 100%;overflow: hidden;">
-			<script type="text/javascript">
-		    /*博客详情广告*/
-			    var cpro_id = "u2355178";
-			</script>
-			<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+			<%--<script type="text/javascript">--%>
+		    <%--/*博客详情广告*/--%>
+			    <%--var cpro_id = "u2355178";--%>
+			<%--</script>--%>
+			<%--<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>--%>
 	  	</div>
 	  </c:if>
 	

@@ -1,12 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-     <script type="text/javascript">
-	    /*120*270 创建于 2015-10-16*/
-		var cpro_id = "u2355208";
-	</script>
-	<script src="http://cpro.baidustatic.com/cpro/ui/f.js" type="text/javascript"></script>
-
+     <%--<script type="text/javascript">--%>
+	    <%--/*120*270 创建于 2015-10-16*/--%>
+		<%--var cpro_id = "u2355208";--%>
+	<%--</script>--%>
+	<%--<script src="http://cpro.baidustatic.com/cpro/ui/f.js" type="text/javascript"></script>--%>
 	<script>
 		var _hmt = _hmt || [];
 		(function() {

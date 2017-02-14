@@ -57,11 +57,11 @@
 				</c:if>
 				<hr data-am-widget="divider" style="" class="am-divider am-divider-dashed"/>
 				<div class="shengming">声明：本站视频均来自网络收集，如有侵权，请联系管理员，我们将在第一时间删除。</div>
-				<script type="text/javascript">
-				    /*博客详情广告*/
-				    var cpro_id = "u2355178";
-				</script>
-				<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+				<%--<script type="text/javascript">--%>
+				    <%--/*博客详情广告*/--%>
+				    <%--var cpro_id = "u2355178";--%>
+				<%--</script>--%>
+				<%--<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>--%>
 			 </div>
 			 </article>
 			 <!-- 多说评论框 start -->

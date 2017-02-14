@@ -73,11 +73,11 @@
 				</c:if>
 				<hr data-am-widget="divider" style="" class="am-divider am-divider-dashed"/>
 				<div class="shengming">声明：若要转载snowcattle中的任何美图请注明转载地址</div>
-				<script type="text/javascript">
-				    /*博客详情广告*/
-				    var cpro_id = "u2355178";
-				</script>
-				<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+				<%--<script type="text/javascript">--%>
+				    <%--/*博客详情广告*/--%>
+				    <%--var cpro_id = "u2355178";--%>
+				<%--</script>--%>
+				<%--<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>--%>
 			 </div>
 			 </article>
 			 <!-- 多说评论框 start -->
