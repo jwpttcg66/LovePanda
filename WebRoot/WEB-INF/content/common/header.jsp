@@ -71,6 +71,12 @@
                             </a>
                         </li>
 
+                        <li>
+                            <a href="${base}/tools/gamevedio">
+                                游戏视频
+                            </a>
+                        </li>
+
                     </ul>
                 </li>
 
